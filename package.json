@@ -1,0 +1,19 @@
+{
+  "name": "airbnb-heroku-deploy",
+  "version": "1.0.0",
+  "description": "Airbnb clone with React frontend and Express backend",
+  "scripts": {
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "install-client": "cd frontend && npm install",
+    "install-server": "cd backend && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "cacheDirectories": [
+    "frontend/node_modules",
+    "backend/node_modules"
+  ]
+}
